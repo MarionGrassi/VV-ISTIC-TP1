@@ -12,7 +12,8 @@
 
 ## Answers
 
-1. Le bug logiciel dans le système radar des missiles Patriot lors de la guerre du Golfe en 1991 était lié à une erreur de gestion des horodatages par le système, qui a empêché le missile de détecter la cible et d'intercepter l'attaque de missile Scud iraquien. Ce bug a eu des conséquences tragiques, entraînant la mort de 28 soldats du 14e détachement de quartier-maître de l'armée américaine.
+1. 
+Le bug logiciel dans le système radar des missiles Patriot lors de la guerre du Golfe en 1991 était lié à une erreur de gestion des horodatages par le système, qui a empêché le missile de détecter la cible et d'intercepter l'attaque de missile Scud iraquien. Ce bug a eu des conséquences tragiques, entraînant la mort de 28 soldats du 14e détachement de quartier-maître de l'armée américaine.
 
 Le bug était local, c'est-à-dire qu'il n'affectait que le système Patriot et non d'autres systèmes. Cependant, il a eu des conséquences globales car il a entraîné la mort de soldats américains et a également ébranlé la confiance des gens dans le système de défense antimissile Patriot.
 
