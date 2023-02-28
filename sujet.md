@@ -21,4 +21,7 @@ Il s'est avéré que la cause était un calcul inexact du temps écoulé depuis 
 
 En testant il aurait pu empêcher cette erreur, en effet  c’est une erreur assez commune et facilement détectable si tester.
 
-2.  
+
+2.
+3.  
+L'article décrit les expériences de Netflix en matière d'ingénierie du chaos, qui consistaient à introduire des défaillances contrôlées dans leurs systèmes afin de tester leur résilience. Ils ont identifié des indicateurs clés de performance pour chaque système et observé des variables telles que les temps de réponse et les taux d'erreur. Les résultats ont montré une amélioration de la résilience des systèmes. D'autres organisations pourraient réaliser des expériences similaires en identifiant les composants critiques, en définissant des indicateurs clés de performance et en observant les variables du système pour améliorer la résilience et réduire les temps d'arrêt.
