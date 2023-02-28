@@ -11,3 +11,21 @@
 5.  Shortly after the appearance of WebAssembly another paper proposed a mechanized specification of the language using Isabelle. The paper can be consulted here: https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf. This mechanized specification complements the first formalization attempt from the paper. According to the author of this second paper, what are the main advantages of the mechanized specification? Did it help improving the original formal specification of the language? What other artifacts were derived from this mechanized specification? How did the author verify the specification? Does this new specification removes the need for testing?
 
 ## Answers
+
+1.  Nous sommes le 25 février 1991 sur le champ de bataille de la guerre du Golfe.
+
+Un Scud iraquien frappe la caserne de Dhahran, en Arabie saoudite, tue 28 soldats du 14e détachement de quartier-maître de l’armée américaine.
+
+L’attaque aurait dû être interceptée par le système radar des missiles Patriot en service. Mais un bug logiciel dans la gestion des horodatages par le système s’est mêlée à la partie.
+
+Conséquence : le système a scruté dans la mauvaise partie du ciel et n’a trouvé aucune cible. En l’absence de cible, la détection initiale était supposée être une piste parasite et le missile avait été retiré du système.
+
+En cause, la batterie de missiles Patriot qui était en service depuis 100 heures, au bout desquelles l’horloge interne du système avait dérivé d’un tiers de seconde. En raison de la vitesse du missile, cela équivalait à une distance manquante de 600 mètres.
+
+Ironie du sort, deux semaines auparavant, le 11 février 1991, les Israéliens avaient identifié le problème et avaient informé l’armée américaine et le bureau du projet Patriot, le fabricant de logiciels.
+
+Comme solution provisoire, les Israéliens avaient recommandé de redémarrer régulièrement les ordinateurs du système.
+
+Le fabricant a fourni un logiciel mis à jour à l’armée le 26 février.
+
+2.  https://issues.apache.org/jira/browse/COLLECTIONS-837
