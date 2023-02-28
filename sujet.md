@@ -12,20 +12,12 @@
 
 ## Answers
 
-1.  Nous sommes le 25 février 1991 sur le champ de bataille de la guerre du Golfe.
+1. Le bug logiciel dans le système radar des missiles Patriot lors de la guerre du Golfe en 1991 était lié à une erreur de gestion des horodatages par le système, qui a empêché le missile de détecter la cible et d'intercepter l'attaque de missile Scud iraquien. Ce bug a eu des conséquences tragiques, entraînant la mort de 28 soldats du 14e détachement de quartier-maître de l'armée américaine.
 
-Un Scud iraquien frappe la caserne de Dhahran, en Arabie saoudite, tue 28 soldats du 14e détachement de quartier-maître de l’armée américaine.
+Le bug était local, c'est-à-dire qu'il n'affectait que le système Patriot et non d'autres systèmes. Cependant, il a eu des conséquences globales car il a entraîné la mort de soldats américains et a également ébranlé la confiance des gens dans le système de défense antimissile Patriot.
 
-L’attaque aurait dû être interceptée par le système radar des missiles Patriot en service. Mais un bug logiciel dans la gestion des horodatages par le système s’est mêlée à la partie.
+Il s'est avéré que la cause était un calcul inexact du temps écoulé depuis le démarrage en raison d'erreurs arithmétiques de l'ordinateur. Plus précisément, le temps en dixièmes de seconde mesuré par l'horloge interne du système était multiplié par 1/10 pour obtenir le temps en secondes. Ce calcul a été effectué en utilisant un registre à virgule fixe de 24 bits. En particulier, la valeur 1/10, qui a une expansion binaire non terminale, a été hachée à 24 bits après le point de radix. La petite erreur de hachage, multipliée par le grand nombre donnant le temps en dixièmes de seconde, conduisait à une erreur importante. En effet, la batterie du Patriot avait fonctionné pendant environ 100 heures, et un calcul facile montre que l'erreur de temps résultant de l'erreur de hachage amplifiée était d'environ 0,34 seconde. (Le nombre 1/10 est égal à 1/24+1/25+1/28+1/29+1/212+1/213+..... En d'autres termes, l'expansion binaire de 1/10 est 0,00011001100110011001100110011001100..... Or, le registre de 24 bits du Patriote stocke plutôt 0,00011001100110011001100 introduisant une erreur de 0,0000000000000000000000011001100... binaire, ou environ 0,000000095 décimal. En multipliant par le nombre de dixièmes de seconde dans 100 heures, on obtient 0,000000095×100×60×60×10=0,34). Le missile se déplace à environ 1 676 mètres par seconde, et parcourt donc plus d'un demi-kilomètre dans ce laps de temps.
 
-Conséquence : le système a scruté dans la mauvaise partie du ciel et n’a trouvé aucune cible. En l’absence de cible, la détection initiale était supposée être une piste parasite et le missile avait été retiré du système.
+En testant il aurait pu empêcher cette erreur, en effet  c’est une erreur assez commune et facilement détectable si tester.
 
-En cause, la batterie de missiles Patriot qui était en service depuis 100 heures, au bout desquelles l’horloge interne du système avait dérivé d’un tiers de seconde. En raison de la vitesse du missile, cela équivalait à une distance manquante de 600 mètres.
-
-Ironie du sort, deux semaines auparavant, le 11 février 1991, les Israéliens avaient identifié le problème et avaient informé l’armée américaine et le bureau du projet Patriot, le fabricant de logiciels.
-
-Comme solution provisoire, les Israéliens avaient recommandé de redémarrer régulièrement les ordinateurs du système.
-
-Le fabricant a fourni un logiciel mis à jour à l’armée le 26 février.
-
-2.  https://issues.apache.org/jira/browse/COLLECTIONS-837
+2.  
